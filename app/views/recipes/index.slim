@@ -1,1 +1,8 @@
 h1 Recipes
+
+= link_to 'Create New Recipe', new_recipe_path(Recipe.new)
+
+ol
+  - @recipes.each do |recipe|
+    li = link_to "#{recipe.name}", recipe_path(recipe)
+    = button_to 'Delete', [recipe], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs"

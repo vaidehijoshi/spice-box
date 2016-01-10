@@ -1,0 +1,7 @@
+h2 Create New Recipe
+
+= simple_form_for recipe do |f|
+  = f.error_notification errors: true
+  = f.input :name
+  = f.input :content
+  = f.button :submit
